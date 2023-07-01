@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Valores de inmuebles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+          <div class="container">
+            <a class="navbar-brand" href="#"><h1>CIB-Soft</h1></a>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                        </li>
+                </ul>             
+            </div>
+      </div>
+    </nav>
+    <div><br></div>
+    <div class="offset-sm-2 col-md-6">
+        <div class="container">
+          <div class="card">
+            <div class="card-header">
+              <h3>Calculadora Inmobiliaria - Inmuebles Bogotá</h3> 
+            </div>
+            <div class="card-body">
+              <form action="/predecir" method="post">
+
+                <!-- <div class="mb-3">
+                  <label for="tipo" class="form-label">Tipo de Inmueble</label>
+                  <div class="form-check"> -->
+                  <input class="form-radio-input" type="hidden" value=1 name="tipo" id="tipo" checked>
+                  <!-- <label class="form-radio-label" for="tipo">
+                    Apartamento
+                  </label>
+                  </div>
+                  <div div class="form-check">
+                  <input class="form-radio-input" type="hidden" value=0 name="tipo" id="tipo">
+                  <label class="form-radio-label" for="tipo">
+                    Casa
+                  </label>
+                </div>
+
+                </div> -->
+                
+                <div class="mb-3">
+                    <label for="upz" class="form-label">UPZ</label>
+                    <select class="form-select form-select-lg" name="upz" id="upz" required>
+                        <option selected>Select one</option>
+                        <option value=814>SANTA FE: Las Nieves + Sagrado Corazón</option>
+                        <option value=37>Santa Isabel</option>
+                        <option value=803>USAQUÉN: Country Club + Santa Bárbara</option>
+                        <option value=816>CHAPINERO: Pardo Rubio + Chapinero</option>
+                        <option value=110>Ciudad Salitre Occidental</option>
+                        <option value=13>Los Cedros</option>
+                        <option value=804>USAQUÉN: Paseo de Los Libertadores + La Uribe</option>
+                        <option value=14>Usaquén</option>
+                        <option value=817>CHAPINERO: Chicó Lago + El Refugio</option>
+                        <option value=101>Teusaquillo</option>
+                        <option value=808>TEUSAQUILLO: Parque Simón Bolívar - CAN + La Esmeralda</option>
+                        <option value=94>La Candelaria</option>
+                        <option value=100>Galerías</option>
+                        <option value=109>Ciudad Salitre Oriental</option>
+                        <option value=26>Las Ferias</option>
+                        <option value=102>La Sabana</option>
+                        <option value=92>La Macarena</option>
+                        <option value=813>FONTIBÓN: Aeropuerto El Dorado + Capellanía</option>
+                        <option value=76>Fontibón San Pablo</option>
+                        <option value=802>KENNEDY: Castilla + Bavaria</option>
+                        <option value=83>Las Margaritas</option>
+                        <option value=98>Los Alcázares</option>
+                        <option value=21>Los Andes</option>
+                        <option value=807>BARRIOS UNIDOS: Parque Salitre + Doce de Octubre</option>
+                        <option value=78>Tintál Norte</option>
+                        <option value=44>Américas</option>
+                        <option value=20>La Alhambra</option>
+                        <option value=24>Niza</option>
+                        <option value=71>Tibabuyes</option>
+                        <option value=12>Toberín</option>
+                        <option value=65>Arborizadora</option>
+                        <option value=11>San Cristóbal Norte</option>
+                        <option value=34>20 de Julio</option>
+                        <option value=35>Ciudad Jardín</option>
+                        <option value=53>Marco Fidel Suárez</option>
+                        <option value=62>Tunjuelito</option>
+                        <option value=95>Las Cruces</option>
+                        <option value=57>Gran Yomasa</option>
+                        <option value=75>Fontibón</option>
+                        <option value=112>Granjas de Techo</option>
+                        <option value=30>Boyacá Real</option>
+                        <option value=73>Garcés Navas</option>
+                        <option value=810>ENGATIVÁ: Santa Cecilia + Jardín Botánico</option>
+                        <option value=74>Engativá</option>
+                        <option value=89>San Isidro - Patios</option>
+                        <option value=42>Venecia</option>
+                        <option value=806>SUBA: La Academia + Guaymaral + San José de Bavaria</option>
+                        <option value=28>El Rincón</option>
+                        <option value=82>Patio Bonito</option>
+                        <option value=32>San Blas</option>
+                        <option value=39>Quiroga</option>
+                        <option value=51>Los Libertadores</option>
+                        <option value=79>Calandaima</option>
+                        <option value=811>USME: Alfonso López + Ciudad Usme</option>
+                        <option value=47>Kennedy Central</option>
+                        <option value=70>Jerusalén</option>
+                        <option value=40>Ciudad Montes</option>
+                        <option value=54>Marruecos</option>
+                        <option value=36>San José</option>
+                        <option value=43>San Rafael</option>
+                        <option value=69>Ismael Perdomo</option>
+                        <option value=52>La Flora</option>
+                        <option value=77>Zona Franca</option>
+                        <option value=81>Gran Britalia</option>
+                        <option value=55>Diana Turbay</option>
+                        <option value=45>Carvajal</option>
+                        <option value=86>El Porvenir</option>
+                        <option value=66>San Francisco</option>
+                        <option value=27>Suba</option>
+                        <option value=72>Bolivia</option>
+                        <option value=33>Sosiego</option>
+                        <option value=84>Bosa Occidental</option>
+                        <option value=48>Timiza</option>
+                        <option value=18>Britalia</option>
+                        <option value=96>Lourdes</option>
+                        <option value=38>Restrepo</option>
+                        <option value=85>Bosa Central</option>
+                        <option value=67>Lucero</option>
+                        <option value=87>Tintál Sur</option>
+                        <option value=29>Minuto de Dios</option>
+                        <option value=809>PUENTE ARANDA: Zona Industrial + Puente Aranda</option>
+                        <option value=50>La Gloria</option>
+                        <option value=25>La Floresta</option>
+                        <option value=107>Quinta Paredes</option>
+                        <option value=80>Corabastos</option>
+                        <option value=49>Apogeo</option>
+                        <option value=114>Modelia</option>
+                        <option value=116>Álamos</option>
+                        <option value=58>Comuneros</option>
+                        <option value=815>CIUDAD BOLÍVAR: Monteblanco + El Tesoro + El Mochuelo</option>
+                        <option value=9>Verbenal</option>
+                        <option value=23>Casa Blanca Suba</option>
+                        <option value=19>El Prado</option>
+                        <option value=41>Muzú</option>
+                        <option value=812>USME: Parque Entrenubes + Danubio</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                  <label for="area" class="form-label">Area</label>
+                  <input type="number"
+                    class="form-control" name="area" id="area" aria-describedby="helpId" placeholder="" required>
+                  <small id="helpId" class="form-text text-muted">Ingrese el Area en m^2</small>
+                </div>
+                <div class="mb-3">
+                  <label for="habitaciones" class="form-label">N de Habitaciones</label>
+                  <input type="number"
+                    class="form-control" name="habitaciones" id="habitaciones" aria-describedby="helpId" placeholder="" required>
+                </div>
+                <div class="mb-3">
+                  <label for="banos" class="form-label">N de Baños</label>
+                  <input type="number"
+                    class="form-control" name="banos" id="banos" aria-describedby="helpId" placeholder="" required>
+                </div>
+
+                  
+                <div class="mb-3 row">
+                    <div>
+                        <button type="submit" class="btn btn-primary">Calcular</button>
+                    </div>
+                </div>
+              </form>
+            </div> 
+            <br>  
+
+            <div>
+              {{prediccion_text|safe}}
+            </div>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-muted">© 2023 Mario Acendra</span>
+      </div>
+      </footer>
+  </div>
+    
+    
+</body>
+</html>
