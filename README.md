@@ -10,11 +10,15 @@ Master Branch:
 
    1. Carpera ML-Project:
       1.1. Archivos del aplicativo web.
+      
             - Archivo index.py (Aplicativo)
+      
             - Carpeta templates (Templates html de la interfaz del aplicativo)
+      
             - Archivo pkl con el modelo entrenado.
-   2. Archivo cuaderno de google colab con todo el procesamiento de los datos y entrenamiento del modelo de MachineLearning. 
-   3. Requirements.txt
+      
+   3. Archivo cuaderno de google colab con todo el procesamiento de los datos y entrenamiento del modelo de MachineLearning. 
+   4. Requirements.txt
 
 Main Branch:
 
