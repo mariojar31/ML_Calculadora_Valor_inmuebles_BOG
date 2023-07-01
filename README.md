@@ -6,13 +6,20 @@ El modelo de Machine Learning fue creado con la técnica de Regresión linear m�
 
 Este repositorio contiene: 
 
-Main Branch:
-1. Cuaderno de Google Colab con todo el proceso de limpieza de datos, preparación de la vista mineable y entrenamiento y prueba del modelo.
-2. Sitio Web Estatico (Sin funcionalidad). 
-
 Master Branch:
-1. Archivos Py y html del aplicativo web.
-2. Archivo pkl con el modelo entrenado.
+
+   1. Carpera ML-Project:
+      1.1. Archivos del aplicativo web.
+            - Archivo index.py (Aplicativo)
+            - Carpeta templates (Templates html de la interfaz del aplicativo)
+            - Archivo pkl con el modelo entrenado.
+   2. Archivo cuaderno de google colab con todo el procesamiento de los datos y entrenamiento del modelo de MachineLearning. 
+   3. Requirements.txt
+
+Main Branch:
+
+   1. Sitio Web Estatico (Sin funcionalidad). 
+
 
 Desarrollado por: Mario Acendra Retamozo  
 
