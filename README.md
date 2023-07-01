@@ -19,7 +19,7 @@ Desarrollado por: Mario Acendra Retamozo
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
-##Para Ejecutar la App Web:
+#Para Ejecutar la App Web:
 
 1) Descargar los archivos en tu ordenador.
 2) Crear un entorno virtual con venv, puedes hacerlo de la siguiente forma:
