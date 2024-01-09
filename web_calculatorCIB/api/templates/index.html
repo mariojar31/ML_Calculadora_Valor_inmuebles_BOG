@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Valores de inmuebles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+          <div class="container">
+            <a class="navbar-brand" href="#"><h1>CIB-Soft</h1></a>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                        </li>
+                </ul>             
+            </div>
+      </div>
+    </nav>
+    <div><br></div>
+    <div class="offset-sm-2 col-md-6">
+        <div class="container">
+          <div class="card">
+            <div class="card-header">
+              <h3>Calculadora Inmobiliaria - Inmuebles Bogotá</h3> 
+            </div>
+            <div class="card-body">
+              <form action="/predecir" method="post">
+
+                <!-- <div class="mb-3">
+                  <label for="tipo" class="form-label">Tipo de Inmueble</label>
+                  <div class="form-check"> -->
+                  <input class="form-radio-input" type="hidden" value=1 name="tipo" id="tipo" checked>
+                  <!-- <label class="form-radio-label" for="tipo">
+                    Apartamento
+                  </label>
+                  </div>
+                  <div div class="form-check">
+                  <input class="form-radio-input" type="hidden" value=0 name="tipo" id="tipo">
+                  <label class="form-radio-label" for="tipo">
+                    Casa
+                  </label>
+                </div>
+
+                </div> -->
+                
+                <div class="mb-3">
+                    <label for="upz" class="form-label">UPZ</label>
+                    <select class="form-select form-select-md" name="upz" id="upz" required>
+                        <option selected>Select one</option>
+                        {% for indice, upz_info in upz_list.items() %}
+                            <option value="{{ upz_info['UPZ_COD'] }}">{{ upz_info['UPZ'] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="mb-3">
+                  <label for="area" class="form-label">Area</label>
+                  <input type="number"
+                    class="form-control form-control-md" name="area" id="area" aria-describedby="helpId" placeholder="" required>
+                  <small id="helpId" class="form-text text-muted">Ingrese el Area en m^2</small>
+                </div>
+                <div class="mb-3">
+                  <label for="habitaciones" class="form-label">N de Habitaciones</label>
+                  <input type="number"
+                    class="form-control form-control-md" name="habitaciones" id="habitaciones" aria-describedby="helpId" placeholder="" required>
+                </div>
+                <div class="mb-3">
+                  <label for="banos" class="form-label">N de Baños</label>
+                  <input type="number"
+                    class="form-control form-control-md" name="banos" id="banos" aria-describedby="helpId" placeholder="" required>
+                </div>
+
+                  
+                <div class="mb-3 row">
+                    <div>
+                        <button type="submit" class="btn btn-primary">Calcular</button>
+                    </div>
+                </div>
+              </form>
+            </div> 
+            <br>  
+
+            <div>
+              {{prediccion_text|safe}}
+            </div>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-muted">© 2023 Mario Acendra</span>
+      </div>
+      </footer>
+  </div>
+    
+    
+</body>
+</html>
